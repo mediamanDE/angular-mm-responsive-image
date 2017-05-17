@@ -3,3 +3,7 @@ import { ResponsiveImageInterface as DefaultResponsiveImageInterface } from './r
 export interface ResponsiveImageInterface extends DefaultResponsiveImageInterface {
 
 }
+
+export declare class MmResponsiveImageComponent {
+
+}
