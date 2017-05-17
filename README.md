@@ -45,6 +45,11 @@ Once the component is declared, you can start using it:
     [alt]="'Just a placeholder'"></mm-responsive-image>
 ```
 
+## Polyfill
+
+Because [responsive images](https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content) are not yet 
+supported by all major browsers you will need to use a polyfill library, like [picturefill](https://github.com/scottjehl/picturefill).
+
 ## Inputs
 
 The component accepts the following inputs:
