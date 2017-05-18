@@ -1,5 +1,7 @@
 # mm-responsive-image
 
+[![Build Status](https://travis-ci.org/mediamanDE/angular-mm-responsive-image.svg?branch=master)](https://travis-ci.org/mediamanDE/angular-mm-responsive-image)
+
 ## Installation
 
 To install this library, run:
