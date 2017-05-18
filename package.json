@@ -12,7 +12,7 @@
     "test": "concurrently \"npm run build:watch\" \"karma start karma.conf.js\"",
     "install": "npm run build"
   },
-  "main": "./build/app/index.js",
+  "main": "./src/app/index.js",
   "typings": "./src/app/index.d.ts",
   "repository": {
     "type": "git",
