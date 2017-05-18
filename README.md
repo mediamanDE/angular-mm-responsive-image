@@ -2,9 +2,11 @@
 
 [![Build Status](https://travis-ci.org/mediamanDE/angular-mm-responsive-image.svg?branch=master)](https://travis-ci.org/mediamanDE/angular-mm-responsive-image)
 
+![Demo GIF](https://raw.githubusercontent.com/mediamanDE/angular-mm-responsive-image/master/demo.gif)
+
 ## Installation
 
-To install this library, run:
+To install the component run:
 
 ```
 $ npm install mm-responsive-image --save
