@@ -71,6 +71,20 @@ describe('MmResponsiveImageComponent', () => {
             expect(component.sources[2].width).toBe(600);
             expect(component.sources[3].width).toBe(400);
         });
+
+        it('should take the smallest image as the ::fallbackSource if it was not set explicitly', () => {
+            component.sources = sourcesMock;
+
+            component.ngOnChanges();
+
+            expect(component.fallbackSource).toBe(component.sources[3].src);
+        });
+
+        it('should not set the ::fallbackSource if there are not ::sources', () => {
+            component.ngOnChanges();
+
+            expect(component.fallbackSource).toBe('');
+        });
     });
 
     it('should have a picture element with sources from the ::sources property', () => {

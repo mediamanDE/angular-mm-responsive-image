@@ -76,7 +76,7 @@ to use a polyfill library, like [picturefill](https://github.com/scottjehl/pictu
 The component accepts the following inputs:
 
 - `sources` An array of sources (`{width: number, src: string}`)
-- `fallbackSource` The default image source
+- `fallbackSource` The default image source. If not set, it will be the smallest source from the `sources` array
 - `alt` The alt-attribute value of the image
 
 ## License
