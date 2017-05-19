@@ -1,12 +1,27 @@
 # mm-responsive-image
 
+Responsive image component for Angular.
+
+Wraps the HTML5 [picture element](https://developer.mozilla.org/de/docs/Web/HTML/Element/picture) to make it easier and 
+more convenient to use.
+
 [![Build Status](https://travis-ci.org/mediamanDE/angular-mm-responsive-image.svg?branch=master)](https://travis-ci.org/mediamanDE/angular-mm-responsive-image)
 
 ![Demo GIF](https://raw.githubusercontent.com/mediamanDE/angular-mm-responsive-image/master/demo.gif)
 
 ## Installation
 
-To install the component run:
+### Yarn
+
+To install the component with [yarn](https://yarnpkg.com) run:
+
+```
+$ yarn add mm-responsive-image
+```
+
+### NPM
+
+To install the component with [npm](https://www.npmjs.com/) run:
 
 ```
 $ npm install mm-responsive-image --save
@@ -49,10 +64,12 @@ Once the component is declared, you can start using it:
     [alt]="'Just a placeholder'"></mm-responsive-image>
 ```
 
+**Note**: There's no need to sort the sources by their width, this will be done by the component itself.
+
 ## Polyfill
 
-Because [responsive images](https://html.spec.whatwg.org/multipage/embedded-content.html#embedded-content) are not yet 
-supported by all major browsers you will need to use a polyfill library, like [picturefill](https://github.com/scottjehl/picturefill).
+Because [picture element](http://caniuse.com/#feat=picture) are not supported by all browsers you may need 
+to use a polyfill library, like [picturefill](https://github.com/scottjehl/picturefill).
 
 ## Inputs
 
