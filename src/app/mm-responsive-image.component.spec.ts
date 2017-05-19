@@ -80,7 +80,7 @@ describe('MmResponsiveImageComponent', () => {
             expect(component.fallbackSource).toBe(component.sources[3].src);
         });
 
-        it('should not set the ::fallbackSource if there are not ::sources', () => {
+        it('should not set the ::fallbackSource if there are no ::sources', () => {
             component.ngOnChanges();
 
             expect(component.fallbackSource).toBe('');
