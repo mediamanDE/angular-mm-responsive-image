@@ -21,6 +21,7 @@ export class MmResponsiveImageComponent implements OnChanges {
 
     /**
      * Fallback image source
+     * If not set, it will be the smallest source from the ::sources array
      *
      * @type {string}
      */
@@ -38,5 +39,9 @@ export class MmResponsiveImageComponent implements OnChanges {
      */
     ngOnChanges() {
         this.sources.sort((a: ResponsiveImageInterface, b: ResponsiveImageInterface) => b.width - a.width);
+
+        if (!this.fallbackSource && this.sources.length) {
+            this.fallbackSource = this.sources[(this.sources.length - 1)].src;
+        }
     }
 }
