@@ -40,6 +40,8 @@ describe('MmResponsiveImageComponent', () => {
 
             fixture.detectChanges();
         });
+
+        window['picturefill'] = null;
     }));
 
     describe('::sources', () => {
@@ -84,6 +86,30 @@ describe('MmResponsiveImageComponent', () => {
             component.ngOnChanges();
 
             expect(component.fallbackSource).toBe('');
+        });
+
+        it('should use a polyfill in legacy browsers', (done) => {
+            window['picturefill'] = jasmine.createSpy('picturefill');
+            component.sources = sourcesMock;
+
+            const fallbackEl = compiled.query(By.css('img')).nativeElement;
+            const sourceEls = compiled.queryAll(By.css('source'));
+            sourceEls.forEach((sourceEl) => {
+                spyOn(sourceEl.nativeElement, 'setAttribute');
+            });
+
+            spyOn(fallbackEl, 'setAttribute');
+            component.ngOnChanges();
+
+            setTimeout(() => {
+                sourceEls.forEach((sourceEl, i) => {
+                    expect(sourceEl.nativeElement.setAttribute).toHaveBeenCalledWith('srcset', component.sources[i].src);
+                });
+                expect(fallbackEl.setAttribute).toHaveBeenCalledWith('srcset', component.fallbackSource);
+                expect(window['picturefill']).toHaveBeenCalledWith({reevaluate: true});
+
+                done();
+            });
         });
     });
 

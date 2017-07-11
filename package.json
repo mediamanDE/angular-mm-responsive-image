@@ -8,7 +8,7 @@
     "docs:build": "compodoc -p tsconfig.json -n mm-responsive-image -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
     "docs:watch": "npm run docs:build -- -s -w",
-    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "lint": "tslint --type-check --project src/tsconfig.json src/**/*[!.ds].ts",
     "test": "concurrently \"npm run build\" \"karma start karma.conf.js\"",
     "install": "npm run build"
   },
