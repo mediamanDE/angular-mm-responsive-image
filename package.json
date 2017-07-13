@@ -2,7 +2,7 @@
   "name": "mm-responsive-image",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsc -p src/",
+    "build": "ngc -p ./src/tsconfig.json",
     "build:watch": "tsc -p src/ -w",
     "docs": "npm run docs:build",
     "docs:build": "compodoc -p tsconfig.json -n mm-responsive-image -d docs --hideGenerator",
