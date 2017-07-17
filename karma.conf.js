@@ -2,11 +2,6 @@
 module.exports = function(config) {
 
     var appBase    = 'src/';       // transpiled app JS and map files
-    var appSrcBase = appBase;      // app source TS files
-
-    // Testing helpers (optional) are conventionally in a folder called `testing`
-    var testingBase    = 'testing/'; // transpiled test JS and map files
-    var testingSrcBase = 'testing/'; // test source TS files
 
     var configuration = {
         basePath: '',
@@ -19,7 +14,7 @@ module.exports = function(config) {
         ],
 
         client: {
-            builtPaths: [appBase, testingBase], // add more spec base paths as needed
+            builtPaths: [appBase], // add more spec base paths as needed
             clearContext: false // leave Jasmine Spec Runner output visible in browser
         },
 
@@ -63,7 +58,6 @@ module.exports = function(config) {
 
             // transpiled application & spec code paths loaded via module imports
             { pattern: appBase + '**/*.js', included: false, watched: true },
-            { pattern: testingBase + '**/*.js', included: false, watched: true },
 
 
             // Asset (HTML & CSS) paths loaded via Angular's component compiler
@@ -73,9 +67,7 @@ module.exports = function(config) {
 
             // Paths for debugging with source maps in dev tools
             { pattern: appBase + '**/*.ts', included: false, watched: false },
-            { pattern: appBase + '**/*.js.map', included: false, watched: false },
-            { pattern: testingSrcBase + '**/*.ts', included: false, watched: false },
-            { pattern: testingBase + '**/*.js.map', included: false, watched: false}
+            { pattern: appBase + '**/*.js.map', included: false, watched: false }
         ],
 
         // Proxied base paths for loading assets
