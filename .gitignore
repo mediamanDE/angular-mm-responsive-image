@@ -28,5 +28,3 @@ Desktop.ini
 
 # Build files
 dist/*
-src/main.js*
-src/app/*.js*
