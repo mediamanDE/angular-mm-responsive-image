@@ -2,15 +2,9 @@
   "name": "mm-responsive-image",
   "version": "0.1.0",
   "scripts": {
-    "build": "tsc -p src/",
-    "build:watch": "tsc -p src/ -w",
-    "docs": "npm run docs:build",
-    "docs:build": "compodoc -p tsconfig.json -n mm-responsive-image -d docs --hideGenerator",
-    "docs:serve": "npm run docs:build -- -s",
-    "docs:watch": "npm run docs:build -- -s -w",
+    "compile": "tsc -p src/",
     "lint": "tslint --type-check --project src/tsconfig.json src/**/*[!.ds].ts",
-    "test": "concurrently \"npm run build\" \"karma start karma.conf.js\"",
-    "install": "npm run build"
+    "test": "concurrently \"npm run compile\" \"karma start karma.conf.js\""
   },
   "main": "./src/app/index.js",
   "typings": "./src/app/index.d.ts",
