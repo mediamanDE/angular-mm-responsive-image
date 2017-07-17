@@ -8,14 +8,8 @@
     "experimentalDecorators": true,
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "types": [
-      "node"
-    ]
+    "suppressImplicitAnyIndexErrors": true
   },
-  "files": [
-    "./app/index.ts"
-  ],
   "exclude": [
     "node_modules/"
   ]

@@ -2,11 +2,6 @@
 module.exports = function(config) {
 
     var appBase    = 'src/';       // transpiled app JS and map files
-    var appSrcBase = appBase;      // app source TS files
-
-    // Testing helpers (optional) are conventionally in a folder called `testing`
-    var testingBase    = 'testing/'; // transpiled test JS and map files
-    var testingSrcBase = 'testing/'; // test source TS files
 
     var configuration = {
         basePath: '',
@@ -19,7 +14,7 @@ module.exports = function(config) {
         ],
 
         client: {
-            builtPaths: [appBase, testingBase], // add more spec base paths as needed
+            builtPaths: [appBase], // add more spec base paths as needed
             clearContext: false // leave Jasmine Spec Runner output visible in browser
         },
 
