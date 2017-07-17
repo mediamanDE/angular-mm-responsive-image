@@ -1,7 +1,6 @@
 # Node
 node_modules/*
 npm-debug.log
-src/node_modules
 
 # TypeScript
 src/*.d.ts
