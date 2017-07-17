@@ -10,6 +10,9 @@
     "noImplicitAny": false,
     "suppressImplicitAnyIndexErrors": true
   },
+  "filesGlob": [
+    "./app/**/*.ts"
+  ],
   "exclude": [
     "node_modules/"
   ]
