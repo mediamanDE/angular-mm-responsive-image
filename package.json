@@ -1,6 +1,6 @@
 {
   "name": "mm-responsive-image",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "ngc -p ./src/tsconfig.json",
     "build:watch": "tsc -p src/ -w",
