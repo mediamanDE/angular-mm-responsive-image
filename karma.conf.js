@@ -63,7 +63,6 @@ module.exports = function(config) {
 
             // transpiled application & spec code paths loaded via module imports
             { pattern: appBase + '**/*.js', included: false, watched: true },
-            { pattern: testingBase + '**/*.js', included: false, watched: true },
 
 
             // Asset (HTML & CSS) paths loaded via Angular's component compiler
@@ -73,9 +72,7 @@ module.exports = function(config) {
 
             // Paths for debugging with source maps in dev tools
             { pattern: appBase + '**/*.ts', included: false, watched: false },
-            { pattern: appBase + '**/*.js.map', included: false, watched: false },
-            { pattern: testingSrcBase + '**/*.ts', included: false, watched: false },
-            { pattern: testingBase + '**/*.js.map', included: false, watched: false}
+            { pattern: appBase + '**/*.js.map', included: false, watched: false }
         ],
 
         // Proxied base paths for loading assets
