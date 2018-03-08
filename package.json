@@ -1,6 +1,6 @@
 {
   "name": "mm-responsive-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "scripts": {
     "compile": "tsc -p src/",
     "lint": "tslint --type-check --project src/tsconfig.json src/**/*[!.ds].ts",
