@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { MmResponsiveImageComponent } from './mm-responsive-image.component';
-import { ResponsiveImageInterface } from './responsive-image.interface';
+import { ResponsiveImageInterface } from '../src/responsive-image.interface';
+import { MmResponsiveImageComponent } from '../src/mm-responsive-image.component';
 
 describe('MmResponsiveImageComponent', () => {
     const sourcesMock: Array<ResponsiveImageInterface> = [
@@ -91,6 +91,8 @@ describe('MmResponsiveImageComponent', () => {
         it('should use a polyfill in legacy browsers', (done) => {
             window['picturefill'] = jasmine.createSpy('picturefill');
             component.sources = sourcesMock;
+
+            fixture.detectChanges();
 
             const fallbackEl = compiled.query(By.css('img')).nativeElement;
             const sourceEls = compiled.queryAll(By.css('source'));

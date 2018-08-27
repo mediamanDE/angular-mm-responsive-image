@@ -11,16 +11,6 @@ more convenient to use.
 
 ## Installation
 
-### Yarn
-
-To install the component with [yarn](https://yarnpkg.com) run:
-
-```
-$ yarn add mm-responsive-image
-```
-
-### NPM
-
 To install the component with [npm](https://www.npmjs.com/) run:
 
 ```

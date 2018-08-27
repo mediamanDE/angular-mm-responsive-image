@@ -14,29 +14,23 @@ declare var picturefill: any;
 export class MmResponsiveImageComponent implements OnChanges {
 
     /**
-     * @type {ElementRef}
+     * The picture element
      */
     @ViewChild('picture') pictureEl: ElementRef;
 
     /**
      * The image sources
-     *
-     * @type {Array<ResponsiveImageInterface>}
      */
     @Input() sources: Array<ResponsiveImageInterface> = [];
 
     /**
      * Fallback image source
      * If not set, it will be the smallest source from the ::sources array
-     *
-     * @type {string}
      */
     @Input() fallbackSource: string = '';
 
     /**
      * The images alt text
-     *
-     * @type {string}
      */
     @Input() alt: string = '';
 
@@ -56,7 +50,7 @@ export class MmResponsiveImageComponent implements OnChanges {
                 const sourceEls = this.pictureEl.nativeElement.querySelectorAll('source');
                 const fallbackEl = this.pictureEl.nativeElement.querySelector('img');
 
-                Array.prototype.forEach.call(sourceEls, (sourceEl, i) => {
+                Array.prototype.forEach.call(sourceEls, (sourceEl: HTMLSourceElement, i: number) => {
                     sourceEl.setAttribute('srcset', this.sources[i].src);
                 });
                 fallbackEl.setAttribute('srcset', this.fallbackSource);
